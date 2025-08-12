@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>FrameDrop — AutoFit v4 (Netlify Safe)</title>
+  <title>FrameDrop — AutoFit v5 (Pages Ready)</title>
   <style>
     :root{--bg:#0b0d10;--fg:#e7ebf0;--muted:#a2adba;--line:#1f2630;--ok:#7ee787;--bad:#ff9b9b;--brand:#7aa2ff;--brand2:#8bd1ff}
     *{box-sizing:border-box}
@@ -35,12 +35,18 @@
   </style>
 </head>
 <body>
-<noscript style="color:#fff;background:#a00;padding:12px;display:block">This app needs JavaScript enabled.</noscript>
 <div class="wrap">
   <div class="left panel">
     <div class="section">
-      <h1>FrameDrop — AutoFit v4 (Netlify Safe)</h1>
-      <div class="hint">Order matters: Base → Overlay → Art. If overlay detection fails, we use a centered default opening so export still works.</div>
+      <h1>FrameDrop — AutoFit v5 (Pages Ready)</h1>
+      <div class="hint">Order: Base → Overlay → Art. “JS READY” below confirms the script is active.</div>
+      <div id="diag" class="diag">Diagnostics: loading…</div>
+      <div class="chips">
+        <div id="chipReady" class="chip">JS: —</div>
+      </div>
+      <div style="margin-top:6px">
+        <button id="initBtn" class="btn gray">Run setup (if needed)</button>
+      </div>
     </div>
 
     <div class="section">
@@ -53,7 +59,6 @@
         <div id="chipOpening" class="chip">Opening: —</div>
         <div id="chipArt" class="chip">Art: 0</div>
       </div>
-      <div class="diag" id="diag">Diagnostics: waiting for script…</div>
     </div>
 
     <div class="section">
@@ -87,7 +92,6 @@
     <canvas id="cvs"></canvas>
   </div>
 </div>
-
-<script src="app.js" defer></script>
+<script src="app-v5.js" defer></script>
 </body>
 </html>
